@@ -62,6 +62,7 @@ if ${use_color} ; then
 		fi
 	fi
 
+    # Set a colorized prompt if appropriate. (It's always appropriate.)
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;37m\][\[\033[01;31m\]\h\[\033[01;34m\] \W\[\033[01;37m\]] $PS1_STATUS \[\033[01;34m\]\$\[\033[00m\] '
 	else
@@ -83,6 +84,9 @@ unset use_color safe_term match_lhs
 
 # If vim's around, let's use it.
 (which vim &> /dev/null) && alias vi="vim"; export EDITOR=vim
+
+# Force PST for sanity's sake, e.g. in irssi.
+[[ -f /usr/share/zoneinfo/PST8PDT ]] && export TZ="/usr/share/zoneinfo/PST8PDT"
 
 # Aliases.
 
