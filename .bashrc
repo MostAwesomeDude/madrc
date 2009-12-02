@@ -81,6 +81,9 @@ unset use_color safe_term match_lhs
 [[ -f /etc/bash-completion ]] && . /etc/bash-completion
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 
+# If vim's around, let's use it.
+(which vim &> /dev/null) && alias vi="vim"; export EDITOR=vim
+
 # Aliases.
 
 # ncmpc colors
