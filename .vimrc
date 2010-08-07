@@ -9,3 +9,5 @@ set smartindent
 
 set wm=2
 set textwidth=78
+
+set listchars=tab:>-,eol:$
