@@ -108,3 +108,5 @@ alias screen="screen -D -R"
 alias svndiff="svn diff -x -u --diff-cmd colordiff | less -FR"
 alias svnds="svn diff | diffstat"
 
+# Add local binaries (virtualenv) to path.
+[[ -d ~/local/bin ]] && PATH="~/local/bin:$PATH"
