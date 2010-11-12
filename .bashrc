@@ -12,6 +12,7 @@ fi
 
 # Some systems, like Fedora, have all kinds of goodies in their /etc/bashrc.
 [[ -f /etc/bashrc ]] && . /etc/bashrc
+[[ -f /etc/profile ]] && . /etc/profile
 
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
